@@ -8,12 +8,12 @@ export default function App() {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.tasks);
 
+  const baseUrl = process.env.REACT_APP_BASEURL
   useEffect(() => {
-    // Simulate fetching tasks from a fake API (db.json)
-    fetch('http://localhost:3003/tasks')
+    fetch(`${baseUrl}/tasks`)
       .then((response) => response.json())
       .then((data) => {
-        dispatch(loadTasks(data));
+        dispatch(loadTasks(data)); 
       });
   }, [dispatch]);
 
