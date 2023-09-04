@@ -8,7 +8,7 @@ export default function App() {
   const dispatch = useDispatch();
   const tasks = useSelector((state) => state.tasks);
 
-  const baseUrl = process.env.REACT_APP_BASEURL
+  const baseUrl = process.env.reactappbaseurl
   useEffect(() => {
     fetch(`${baseUrl}/tasks`)
       .then((response) => response.json())
