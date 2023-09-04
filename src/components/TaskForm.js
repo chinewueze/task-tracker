@@ -13,7 +13,7 @@ export default function TaskForm() {
     }
     const newTask = {
       text,
-      id: Date.now(), // Generate a unique ID (in a real app, use a more robust method)
+      id: Date.now(), 
     };
     dispatch(addTask(newTask));
     setText('');
