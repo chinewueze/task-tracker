@@ -43,8 +43,8 @@ export default function TaskList({ tasks }) {
 
   return (
     <div className='w-screen relative'>
-      <div className='border border-blue-500 w-full'>
-        <ul className='flex flex-wrap border-black border mx-[4%]'>
+      <div className=' w-full mt-6'>
+        <ul className='flex flex-wrap mx-[4%]'>
           {tasks.map((task) => (
             <li className="mx-5 my-3" key={task.id}>
               {isEditing === task.id ? (
